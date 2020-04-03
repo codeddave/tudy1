@@ -1,0 +1,26 @@
+.list {
+  color: white;
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 25px;
+  background-color: violet;
+  border-radius: 3px;
+}
+
+.list p {
+  padding: 5px;
+  position: relative;
+}
+
+.trash {
+  cursor: pointer;
+  font-size: 13;
+  position: absolute;
+  right: 10px;
+}
+
+.list p input {
+  background-color: transparent;
+  border: 0;
+  color: white;
+}
