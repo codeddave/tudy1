@@ -41,81 +41,91 @@ class Signup extends Component {
   render() {
     return (
       <div>
-        <img className="signimg" src={Logo} style={{ marginLeft: "20px" }} />
+        <div className="cover" style={{ maxWidth: "1300px", display: "flex" }}>
+          <img
+            className="signimg"
+            src={Logo}
+            style={{ flex: "3", width: "80%" }}
+          />
 
-        <div
-          className="signbox"
-          style={{
-            width: "500px",
-            backgroundColor: "white",
-            margin: "auto",
-            float: "right",
-            borderRadius: "10px",
-            borderStyle: "solid",
-            marginRight: "100px",
-            marginTop: "20px",
-            height: "500px"
-          }}
-        >
-          <h2>Sign Up</h2>
-          <form
+          <div
+            className="signbox"
             style={{
+              backgroundColor: "white",
+
               width: "400px",
-              marginRight: "50px",
-              float: "right",
-              paddingTop: "20px"
+              borderRadius: "10px",
+              marginLeft: "20px",
+              marginRight: "30px",
+              marginTop: "30px",
+              flex: "1",
+              height: "500px",
+              padding: "10px"
             }}
           >
-            <div className="form-group">
-              <label style={{ float: "left" }} htmlFor="name">
-                {" "}
-                Name:{" "}
-              </label>
-              <input
-                className="form-control form-control-lg"
-                type="text"
-                name="name"
-                value={this.state.name}
-                placeholder="Enter name here..."
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label style={{ float: "left" }} htmlFor="name">
-                {" "}
-                Email:{" "}
-              </label>
-              <input
-                className="form-control form-control-lg"
-                type="email"
-                name="email"
-                placeholder="Enter email here..."
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label style={{ float: "left" }} htmlFor="password">
-                {" "}
-                Password:{" "}
-              </label>
-              <input
-                className="form-control form-control-lg"
-                type="text"
-                name="password"
-                placeholder="Enter password here..."
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-            <button
-              type="button"
-              className="btn btn-primary btn-lg signupbtn"
-              onClick={this.signup}
+            <form
+              className="signinform"
+              style={{
+                width: "200px",
+                margin: "auto",
+
+                paddingTop: "20px"
+              }}
             >
-              Sign Up
-            </button>
-          </form>
+              <h2 style={{ marginTop: "10px" }}>
+                <center>Sign Up</center>
+              </h2>
+              <div className="form-group">
+                <label style={{ float: "left" }} htmlFor="name">
+                  {" "}
+                  Name:{" "}
+                </label>
+                <input
+                  className="form-control loginput form-control-lg"
+                  type="text"
+                  name="name"
+                  value={this.state.name}
+                  placeholder="Enter name here..."
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label style={{ float: "left" }} htmlFor="name">
+                  {" "}
+                  Email:{" "}
+                </label>
+                <input
+                  className="form-control form-control-lg"
+                  type="email"
+                  name="email"
+                  placeholder="Enter email here..."
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label style={{ float: "left" }} htmlFor="password">
+                  {" "}
+                  Password:{" "}
+                </label>
+                <input
+                  className="form-control form-control-lg"
+                  type="text"
+                  name="password"
+                  placeholder="Enter password here..."
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                />
+                <button
+                  type="button"
+                  className="btn btn-primary btn-lg signupbtn"
+                  onClick={this.signup}
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
         <p
           className="lead"

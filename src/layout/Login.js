@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../personal.png";
 import fire from "../config/fire";
+import "../App.css";
 
 class Login extends Component {
   constructor(props) {
@@ -42,81 +43,91 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <img className="landimg img-responsive " src={Logo} />
+        <div className="cover" style={{ maxWidth: "1300px", display: "flex" }}>
+          <img
+            className="landimg  "
+            style={{ flex: "3", width: "80%" }}
+            src={Logo}
+          />
 
-        <div
-          className="signbox"
-          style={{
-            width: "500px",
-            backgroundColor: "white",
-            margin: "auto",
-            float: "right",
-            borderRadius: "10px",
-            borderStyle: "solid",
-            marginRight: "100px",
-            marginTop: "60px",
-            height: "500px"
-          }}
-        >
-          <h2 style={{ marginTop: "30px", marginLeft: "auto" }}>
-            <center>Login</center>
-          </h2>
-          <form
+          <div
+            className="loginbox"
             style={{
+              backgroundColor: "white",
+
               width: "400px",
-              marginRight: "50px",
-              float: "right",
-              paddingTop: "20px"
+              borderRadius: "10px",
+              marginLeft: "20px",
+              marginRight: "30px",
+              marginTop: "30px",
+              flex: "1",
+              height: "500px",
+              padding: "10px"
             }}
           >
-            <div className="form-group">
-              <label style={{ float: "left" }} htmlFor="name">
-                {" "}
-                Email:{" "}
-              </label>
-              <input
-                className="form-control form-control-lg"
-                type="email"
-                name="email"
-                placeholder="Enter email here..."
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label style={{ float: "left" }} htmlFor="password">
-                {" "}
-                Password:{" "}
-              </label>
-              <input
-                className="form-control form-control-lg"
-                type="text"
-                name="password"
-                placeholder="Enter password here..."
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-            <button
-              style={{ marginTop: "1rem", marginLeft: "165px" }}
-              type="button"
-              className="btn btn-primary btn-lg"
-              onClick={this.login}
-            >
-              Login
-            </button>
+            <form
+              className="loginform"
+              style={{
+                width: "200px",
+                margin: "auto",
 
-            <p className="lead" style={{ marginTop: "15px" }}>
-              <center>
-                don't have an account?<Link to="/signup"> Sign Up</Link>{" "}
-              </center>{" "}
-            </p>
-          </form>
+                paddingTop: "20px"
+              }}
+            >
+              <h2 style={{ marginTop: "10px" }}>
+                <center>Login</center>
+              </h2>
+              <div className="form-group">
+                <label style={{ float: "left" }} htmlFor="name">
+                  {" "}
+                  Email:{" "}
+                </label>
+                <input
+                  className="form-control form-control-lg"
+                  type="email"
+                  name="email"
+                  placeholder="Enter email here..."
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label style={{ float: "left" }} htmlFor="password">
+                  {" "}
+                  Password:{" "}
+                </label>
+                <input
+                  className="form-control form-control-lg"
+                  type="text"
+                  name="password"
+                  placeholder="Enter password here..."
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                />
+                <button
+                  style={{ margin: " 20px  auto 10px" }}
+                  type="button"
+                  className="btn loginbtn btn-primary btn-lg"
+                  onClick={this.login}
+                >
+                  Login
+                </button>
+              </div>
+
+              <p className="lead" style={{ marginTop: "10px" }}>
+                <center>
+                  don't have an account?<Link to="/signup"> Sign Up</Link>{" "}
+                </center>{" "}
+              </p>
+            </form>
+          </div>
         </div>
         <div className="row">
-          <div className="col-md-1"></div>
-          <div className="col-md-6" style={{ marginTop: "17px" }}>
-            <p className="lead ">
+          <div
+            className="col-md-6"
+            style={{ display: "flex", marginTop: "17px" }}
+          >
+            <p className="lead " style={{ flex: "1" }}>
               {" "}
               Tudy is a simple to-do list and task manager app that helps you
               keep track of your tasks and manage time{" "}
