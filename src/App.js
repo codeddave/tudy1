@@ -39,14 +39,14 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/about" component={About} />
+            {this.state.user ? (
+              <div>
+                <Todo />
+              </div>
+            ) : (
+              <Login />
+            )}
           </Switch>
-          {this.state.user ? (
-            <div>
-              <Todo />
-            </div>
-          ) : (
-            <Login />
-          )}
         </div>
       </Router>
     );
