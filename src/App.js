@@ -15,14 +15,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: {}
+      user: {},
     };
   }
   componentDidMount() {
     this.authListener();
   }
   authListener() {
-    fire.auth().onAuthStateChanged(user => {
+    fire.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user });
       } else {
@@ -39,14 +39,14 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/about" component={About} />
-            {this.state.user ? (
-              <div>
-                <Landing /> <Todo />
-              </div>
-            ) : (
-              <Login />
-            )}
           </Switch>
+          {this.state.user ? (
+            <div>
+              <Todo />
+            </div>
+          ) : (
+            <Login />
+          )}
         </div>
       </Router>
     );

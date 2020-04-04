@@ -22,10 +22,6 @@ ul {
   margin-top: 30px;
 }
 
-.signupbtn {
-  margin-top: 1rem;
-  margin-left: 140px;
-}
 .tudyintro {
   margin-right: 40px;
 }
@@ -62,6 +58,20 @@ ul {
 .signupbtn {
   margin: auto;
 }
+.loginform input::placeholder {
+  font-size: 15px;
+}
+.signinform input::placeholder {
+  font-size: 15px;
+}
+.loginform label {
+  float: left;
+}
+.signinform label {
+  float: left;
+}
+.logout {
+}
 
 @media only screen and (max-width: 768px) {
   .landimg {
@@ -84,7 +94,7 @@ ul {
   }
   .signbox {
     max-width: 40%;
-    max-height: 400px;
+    max-height: 410px;
   }
   .loginbox h2 {
     font-size: 20px;
@@ -97,20 +107,20 @@ ul {
   .loginform {
     max-width: 60%;
   }
-  .signform {
+  .signinform {
     max-width: 60%;
   }
 
   .loginform p {
     font-size: 13px;
   }
-  .signform p {
+  .signinform p {
     font-size: 13px;
   }
   .loginform label {
     font-size: 13px;
   }
-  .signform label {
+  .signinform label {
     font-size: 13px;
   }
 
@@ -121,26 +131,47 @@ ul {
     font-size: 12px;
     margin-bottom: 0px;
   }
-  .signform button {
+  .signinform button {
     width: 70px;
-    height: 20px;
-    font-size: 10px;
+    height: 45px;
+    font-size: 12px;
+    margin-bottom: 0px;
   }
 
-  .loginput {
-    width: 20%;
-  }
-  .signform input {
-    width: 50px;
-  }
-
-  .loginpout {
-    width: 80%;
-  }
   .loginform input::placeholder {
     font-size: 10px;
   }
-  .signform input::placeholder {
-    font-size: 5px;
+  .signinform input::placeholder {
+    font-size: 10px;
+  }
+  .tudyinfo {
+    width: 200px;
+  }
+  .tudyinfo p {
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 200px;
+  }
+  .signinfo p {
+    font-size: 14px;
+    margin-top: -40px;
+    margin-left: -90px;
+  }
+  .todo {
+    width: 300px;
+  }
+  .todo-form input {
+    height: 30px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+  .todo-form button {
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
   }
 }

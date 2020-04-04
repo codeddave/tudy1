@@ -12,7 +12,7 @@ class Login extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
   }
   login(e) {
@@ -20,10 +20,10 @@ class Login extends Component {
     fire
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {
+      .then((u) => {
         console.log(u);
       })
-      .catch(err => {
+      .catch((err) => {
         var errorCode = err.code;
         var errorMessage = err.message;
         // [START_EXCLUDE]
@@ -37,7 +37,7 @@ class Login extends Component {
   }
   handleChange(e) {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }
   render() {
@@ -54,7 +54,7 @@ class Login extends Component {
             className="loginbox"
             style={{
               backgroundColor: "white",
-
+              border: "solid 2px",
               width: "400px",
               borderRadius: "10px",
               marginLeft: "20px",
@@ -62,7 +62,7 @@ class Login extends Component {
               marginTop: "30px",
               flex: "1",
               height: "500px",
-              padding: "10px"
+              padding: "10px",
             }}
           >
             <form
@@ -71,36 +71,30 @@ class Login extends Component {
                 width: "200px",
                 margin: "auto",
 
-                paddingTop: "20px"
+                paddingTop: "20px",
               }}
             >
-              <h2 style={{ marginTop: "10px" }}>
-                <center>Login</center>
-              </h2>
+              <center>
+                <h2 style={{ marginTop: "10px" }}>Login</h2>
+              </center>
               <div className="form-group">
-                <label style={{ float: "left" }} htmlFor="name">
-                  {" "}
-                  Email:{" "}
-                </label>
+                <label htmlFor="name"> Email: </label>
                 <input
                   className="form-control form-control-lg"
                   type="email"
                   name="email"
-                  placeholder="Enter email here..."
+                  placeholder="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
               </div>
               <div className="form-group">
-                <label style={{ float: "left" }} htmlFor="password">
-                  {" "}
-                  Password:{" "}
-                </label>
+                <label htmlFor="password"> Password: </label>
                 <input
                   className="form-control form-control-lg"
                   type="text"
                   name="password"
-                  placeholder="Enter password here..."
+                  placeholder="password"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
@@ -113,19 +107,18 @@ class Login extends Component {
                   Login
                 </button>
               </div>
-
-              <p className="lead" style={{ marginTop: "10px" }}>
-                <center>
+              <center>
+                <p className="lead" style={{ marginTop: "10px" }}>
                   don't have an account?<Link to="/signup"> Sign Up</Link>{" "}
-                </center>{" "}
-              </p>
+                </p>
+              </center>
             </form>
           </div>
         </div>
-        <div className="row">
+        <div className="row tudyinfo">
           <div
             className="col-md-6"
-            style={{ display: "flex", marginTop: "17px" }}
+            style={{ display: "flex", marginTop: "17px", marginLeft: "40px" }}
           >
             <p className="lead " style={{ flex: "1" }}>
               {" "}

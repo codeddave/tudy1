@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const Header = props => {
+const Header = (props) => {
   const { branding } = props;
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-light mb-3 py-0">
@@ -15,7 +15,7 @@ const Header = props => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link" style={{ color: "black" }}>
-                <i className="fas fa-home" style={{ color: "blue" }} /> Home
+                <i className="fas fa-home" /> Home
               </Link>
             </li>
             <li className="nav-item">
@@ -24,7 +24,7 @@ const Header = props => {
                 className="nav-link"
                 style={{ color: "black" }}
               >
-                <i className="fas fa-plus" /> Sign Up
+                <i className="fas fa-users" /> Sign Up
               </Link>
             </li>
             <li className="nav-item">
@@ -34,7 +34,7 @@ const Header = props => {
             </li>
             <li className="nav-item">
               <Link to="/login" className="nav-link" style={{ color: "black" }}>
-                <i className="fas fa-question" /> Login
+                <i className="fas fa-user" /> Login
               </Link>
             </li>
           </ul>
@@ -45,11 +45,11 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  branding: "My App"
+  branding: "My App",
 };
 
 Header.propTypes = {
-  branding: PropTypes.string.isRequired
+  branding: PropTypes.string.isRequired,
 };
 
 export default Header;
