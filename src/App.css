@@ -28,7 +28,7 @@ ul {
 
 .todo {
   background-color: #3f3160;
-  min-height: 500px;
+  min-height: 600px;
   width: 600px;
   margin: 50px auto;
 }
@@ -69,8 +69,6 @@ ul {
 }
 .signinform label {
   float: left;
-}
-.logout {
 }
 
 @media only screen and (max-width: 768px) {
